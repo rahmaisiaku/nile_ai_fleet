@@ -85,7 +85,7 @@ export default async function ApproverDashboardPage() {
   return (
     <DashboardShell
       role="approver"
-      title="Approver Dashboard"
+      title="Review Officer Dashboard"
       subtitle="Review transport requests and make fast, informed approval decisions."
     >
       <div className="space-y-6">

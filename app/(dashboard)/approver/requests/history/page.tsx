@@ -37,8 +37,8 @@ function buildHistoryHref(decision?: string, page = 1) {
   const query = params.toString();
 
   return query
-    ? `/dashboard/approver/history?${query}`
-    : "/dashboard/approver/history";
+    ? `/approver/requests/history?${query}`
+    : "/approver/requests/history";
 }
 
 function getDecisionLabel(decision?: string) {

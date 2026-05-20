@@ -13,6 +13,7 @@ import {
   X,
   CarFront,
   ChevronRight,
+  Settings
 } from "lucide-react";
 import clsx from "clsx";
 import { AppLogo } from "@/components/shared/app-logo";
@@ -41,11 +42,21 @@ const navByRole: Record<Role, SidebarItem[]> = {
     { label: "Dashboard", href: "/staff/dashboard", icon: LayoutDashboard },
     { label: "Request Vehicle", href: "/staff/requests/new", icon: PlusCircle },
     { label: "My Requests", href: "/staff/requests/my-requests", icon: ClipboardList },
+    {
+      label: "Settings",
+      href: "/staff/settings",
+      icon: Settings,
+    },
   ],
   approver: [
     { label: "Dashboard", href: "/approver/dashboard", icon: LayoutDashboard },
     { label: "Pending Requests", href: "/approver/requests/pending", icon: ClipboardList },
     { label: "History", href: "/approver/requests/history", icon: FileBarChart2 },
+    {
+      label: "Settings",
+      href: "/approver/settings",
+      icon: Settings,
+    },
   ],
   admin: [
     { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
@@ -55,10 +66,20 @@ const navByRole: Record<Role, SidebarItem[]> = {
     { label: "Users", href: "/admin/users", icon: PersonStanding },
     { label: "Trips", href: "/admin/trips", icon: Route },
     { label: "Reports", href: "/admin/reports", icon: FileBarChart2 },
+    {
+      label: "Settings",
+      href: "/admin/settings",
+      icon: Settings,
+    },
   ],
   driver: [
     { label: "Dashboard", href: "/driver/dashboard", icon: LayoutDashboard },
     { label: "Assigned Trips", href: "/driver/trips", icon: Route },
+    {
+      label: "Settings",
+      href: "/driver/settings",
+      icon: Settings,
+    }
   ],
 };
 
@@ -67,7 +88,7 @@ function formatRole(role: Role) {
     case "staff":
       return "Staff";
     case "approver":
-      return "Approver";
+      return "Review Officer";
     case "admin":
       return "Admin";
     case "driver":
