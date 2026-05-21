@@ -8,13 +8,17 @@ const buttonVariants = cva(
   "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
-      variant: {
-      default: "bg-primary text-primary-foreground",
-      outline: "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
-      secondary: "bg-slate-100 text-slate-900 hover:bg-slate-200",
-      ghost: "hover:bg-slate-100 text-slate-700",
-      destructive: "bg-red-600 text-white hover:bg-red-700",
-      link: "text-slate-900 underline-offset-4 hover:underline",
+     variant: {
+      default: "bg-blue-600 text-white hover:bg-blue-700",
+      outline:
+        "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
+      secondary:
+        "bg-slate-100 text-slate-900 hover:bg-slate-200",
+      ghost:
+        "bg-transparent text-slate-700 hover:bg-slate-100",
+      destructive:
+        "bg-red-600 text-white hover:bg-red-700",
+      link: "text-blue-600 underline-offset-4 hover:underline",
     },
       size: {
         default:
